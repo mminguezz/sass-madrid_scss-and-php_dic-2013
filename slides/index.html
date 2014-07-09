@@ -128,7 +128,7 @@
     <font color="#000000">Añadiendo scssphp a nuestro proyecto php</font>
 </h2>
 <p style="position: absolute; width: 869px; height: 113.78px; z-index: 9; left: 43px; top: 384px; max-height: none; max-width: none;" class="absolute-element">
-    <font color="#000000">Ahora visitamos: example.com/style.php/style.scss y nos creara la carpeta scss_cache con nuestro css compilado en el directorio css</font>
+    <font color="#000000">Ahora visitamos: localhost/style.php y nos creara la carpeta scss_cache en el directorio css, bastante simple y tonto pero comprobamos que funciona</font>
 </p>
 
 <blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 514px; top: 520px;">
@@ -148,9 +148,9 @@
 <code> &lt;?php
 	require"scss.inc.php";
 	$scss = new scssc();
-	echo $scss-&gt;compile('	
+	echo $scss-&gt;compile('
 		&nbsp;&nbsp;&nbsp;&nbsp;$color: #abc;
-		&nbsp;&nbsp;&nbsp;&nbsp;div { 
+		&nbsp;&nbsp;&nbsp;&nbsp;div {
 		  	color: lighten($color, 20%);
 		&nbsp;&nbsp;&nbsp;&nbsp;}
 	');
@@ -160,7 +160,7 @@
     <font color="#000000">Compilando sass&nbsp;</font>
 </h2>
 <p style="position: absolute; width: 869px; height: 113.78px; z-index: 9; left: 45px; top: 435px; max-height: none; max-width: none;" class="absolute-element">
-    <font color="#000000">Ahora visitamos: example.com/style.php y nos creara la carpeta scss_cache con nuestro css compilado en el directorio css</font>
+    <font color="#000000">Ahora visitamos: localhost/style.php y nos creara el css compilado del scss</font>
 </p>
 
 <blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
@@ -192,7 +192,7 @@
     <font style="font-size: 42px;" color="#000000">Importando, formatos de salida y comentarios</font>
 </h2>
 <p style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 38px; top: 499px; max-height: none; max-width: none;" class="absolute-element">
-    <font color="#000000">Ahora visitamos: example.com/index.php y nos creara el archivo css apartir de nuestro scss</font>
+    <font color="#000000">Ahora visitamos: localhost/index.php y nos creara el archivo css apartir de nuestro scss</font>
 </p>
 
 <blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
@@ -237,7 +237,7 @@
 </h2>
     <pre style="position: absolute; width: 872px; height: 410px; z-index: 4; left: 40px; top: 60px;" class="absolute-element"><code># Podemos usar los archivos test del proyecto scssphp
         # CSS
-            Simple selectors 
+            Simple selectors
             combinators
             attribute selectors
             class and id selectors

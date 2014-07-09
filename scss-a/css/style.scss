@@ -1,0 +1,13 @@
+ @mixin generic-box($width: 2px, $color: #000) {
+	border: $width solid $color;
+	color: $color;
+}
+.generic-error {
+	padding: 20px;
+	margin: 4px;
+	@include generic-box(5px, #f00);
+}
+
+ $color: #434343;
+ $bg: lighten($color, 20%);
+ p { color:$color; background:$bg;}

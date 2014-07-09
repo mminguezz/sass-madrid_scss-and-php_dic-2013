@@ -1,0 +1,24 @@
+// importando
+@import "import.css";
+@import "header";
+
+@mixin generic-box($width: 2px, $color: #000) {
+	border: $width solid $color;
+	color: $color;
+}
+.generic-error {
+	padding: 20px;
+	margin: 4px;
+	@include generic-box(5px, #f00);
+}
+//estecomentario no pasa
+/* este comentario si pasa */
+ $color: #888;
+ $bg: lighten($color, 30%);
+ p{
+ 	color:$color;
+ 	background:$bg;
+ 	span{
+ 		color:darken( #fabada, 20% ); // homenaje a Felix
+ 	}
+ }
