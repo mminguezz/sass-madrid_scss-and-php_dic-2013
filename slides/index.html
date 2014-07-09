@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>scsspphp - Sass Madrid</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+    <section data-background-color="rgba( 255, 255, 255, 0.9 )">
+        <font style="position: absolute; width: 204px; height: 30px; z-index: 4; left: 64px; top: 624px;" class="absolute-element" color="#000000">@m_minguezz</font>
+<h2 style="position: absolute; width: 129.501px; height: 90px; z-index: 4; left: 65px; top: 510px; max-height: none; max-width: none;" class="absolute-element">
+    <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/miguelminguez/images/195186/avatar_min.png">
+</h2>
+<h1 style="position: absolute; width: 499px; height: 96px; z-index: 5; left: 225px; top: 170px;" class="absolute-element">
+<font color="#434343">
+    <span style="font-size: 36.0px">Madrid Sass &amp; Compass Meetup</span>
+</font>
+</h1>
+<p style="position: absolute; width: 431px; height: 39px; z-index: 6; left: 544px; top: 631px;" class="absolute-element">
+<font style="font-size: 18px;" color="#000000">jueves 19 de diciembre de 2013</font>
+</p>
+<font color="#000000">
+</font>
+<h1 style="position: absolute; width: 522px; height: 96px; z-index: 7; left: 210px; top: 90px;" class="absolute-element">
+    <br>
+</h1>
+<font color="#000000">
+</font>
+<h1 style="position: absolute; width: 522px; height: 96px; z-index: 4; left: 215px; top: 95px;" class="absolute-element">
+<font color="#000000">SASS &amp; PHP</font>
+<br>
+</h1>
+</section>
+        <section data-background-color="rgba( 255, 255, 255, 0.9 )">
+            <h2>
+    <br>
+</h2>
+<h2>
+<font style="font-size: 72px;" color="#000000">Antes de empezar</font>
+</h2>
+<p>
+<font color="#000000">No lo uses en tus proyectos</font>
+</p>
+<p>
+<font color="#000000">Úsalo solo cuando sea necesario</font>
+</p>
+<p>
+<font color="#000000">Solo funciona con scss, no esta implementado sass</font>
+</p>
+<p>
+<font color="#000000">Funciona con scss v3.2.10</font>
+</p>
+<p>
+<br>
+        </p>
+<h3>
+<font color="#000000">Entonces ¿para que?</font>
+</h3>
+<p>
+<font color="#000000">Para proyectos donde no puedes usar ruby <br>
+    </font>
+</p>
+<p>
+<font color="#000000">
+    <br>
+</font>
+</p>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <b>
+    <font style="font-size: 42px;" color="#000000">¿Que vamos a usar?</font>
+</b>
+<br>
+<br>
+<font color="#000000">Vamos a usar el compilador</font>
+<br>
+<h1 style="position: absolute; width: 647px; height: 96px; z-index: 7; left: 160px; top: 174px;" class="absolute-element">
+    <font color="#000000">scssphp v0.0.8</font>
+    </h1>
+<font style="position: absolute; width: 643.232px; height: 60px; z-index: 4; left: 167px; top: 356px; max-height: none; max-width: none;" class="absolute-element" color="#000000"><a href="http://leafo.net/scssphp/">Pagina del compilador</a>
+</font>
+<br>
+<p style="position: absolute; width: 691px; height: 39px; z-index: 5; left: 138px; top: 301px;" class="absolute-element">
+    <font color="#000000"><a href="https://github.com/leafo/scssphp">Pagina de github</a></font>
+</p>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <pre style="position: absolute; width: 872px; height: 139.54px; z-index: 4; left: 43px; top: 203px; max-height: none; max-width: none;" class="absolute-element">
+        <font color="#000000"># Creamos en archivo style.php</font>
+<code> &lt;?php
+	$directory = "css";
+	require"scssphp/scss.inc.php";
+	scss_server::serveFrom($directory);
+?&gt;</code>
+        </pre>
+<h2 style="position: absolute; width: 869px; height: 113.78px; z-index: 8; left: 40px; top: 41px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Añadiendo scssphp a nuestro proyecto php</font>
+</h2>
+<p style="position: absolute; width: 869px; height: 113.78px; z-index: 9; left: 43px; top: 384px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/style.php/style.scss y nos creara la carpeta scss_cache con nuestro css compilado en el directorio css</font>
+</p>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 514px; top: 520px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-a/style-a.php</font>
+    </p>
+</blockquote>
+
+
+
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <pre style="position: absolute; width: 872px; height: 282.276px; z-index: 4; left: 46px; top: 113px; max-height: none; max-width: none;" class="absolute-element">
+        <font color="#000000"># Creamos en archivo style.php</font>
+<code> &lt;?php
+	require"scss.inc.php";
+	$scss = new scssc();
+	echo $scss-&gt;compile('	
+		&nbsp;&nbsp;&nbsp;&nbsp;$color: #abc;
+		&nbsp;&nbsp;&nbsp;&nbsp;div { 
+		  	color: lighten($color, 20%);
+		&nbsp;&nbsp;&nbsp;&nbsp;}
+	');
+?&gt;</code>
+    </pre>
+<h2 style="position: absolute; width: 869px; height: 51.8288px; z-index: 8; left: 38px; top: 31px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Compilando sass&nbsp;</font>
+</h2>
+<p style="position: absolute; width: 869px; height: 113.78px; z-index: 9; left: 45px; top: 435px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/style.php y nos creara la carpeta scss_cache con nuestro css compilado en el directorio css</font>
+</p>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-a/style-b.php</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <pre style="position: absolute; width: 872px; height: 342.738px; z-index: 4; left: 46px; top: 113px; max-height: none; max-width: none;" class="absolute-element">
+        <code>
+        # Formatos de salida
+            scss_formatter
+            scss_formatter_nested (default)
+            scss_formatter_compressed
+            setFormatter($formatterName);
+        # Importando
+            $scss-&gt;addImportPath(__DIR__."/css");
+            @import "import.css";
+            @import "header";
+        # Comentarios
+            /* este comentario pasara */
+            // este comentario no pasara
+        </code>
+    </pre>
+<h2 style="position: absolute; width: 869px; height: 51.8288px; z-index: 8; left: 38px; top: 31px; max-height: none; max-width: none;font-size:30px" class="absolute-element">
+    <font style="font-size: 42px;" color="#000000">Importando, formatos de salida y comentarios</font>
+</h2>
+<p style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 38px; top: 499px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/index.php y nos creara el archivo css apartir de nuestro scss</font>
+</p>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-b/index.php</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <pre style="position: absolute; width: 872px; height: 282.276px; z-index: 4; left: 46px; top: 113px; max-height: none; max-width: none;" class="absolute-element">
+        <font color="#000000"># Creamos en archivo index.php</font>
+<code> &lt;?php
+        $directory = __DIR__."/scss";
+        require "scss.inc.php";
+        $scss = new scssc();
+        $handle = fopen('style.css', 'w');
+        $scssCode = $scss-&gt;compile(file_get_contents($directory.'/style.scss'));
+        fwrite($handle, $scssCode);
+        fclose($handle);
+?&gt;</code>
+    </pre>
+<h2 style="position: absolute; width: 869px; height: 51.8288px; z-index: 8; left: 38px; top: 31px; max-height: none; max-width: none;font-size:30px" class="absolute-element">
+    <font style="font-size: 42px;" color="#000000">Compilando sass en un archivo css</font>
+</h2>
+<p style="position: absolute; width: 869px; height: 113.78px; z-index: 9; left: 45px; top: 435px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/index.php y nos creara el archivo css apartir de nuestro scss</font>
+</p>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-a/index.php</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+<h2 style="position: absolute; width: 869px; height: 51.8288px; z-index: 8; left: 38px; top: 31px; max-height: none; max-width: none;font-size:30px" class="absolute-element">
+    <font style="font-size: 42px;" color="#000000">Poniendo a prueba el css y sass</font>
+</h2>
+    <pre style="position: absolute; width: 872px; height: 410px; z-index: 4; left: 40px; top: 60px;" class="absolute-element"><code># Podemos usar los archivos test del proyecto scssphp
+        # CSS
+            Simple selectors 
+            combinators
+            attribute selectors
+            class and id selectors
+            pseudo-elements
+            pseudo-classes
+            namespaces
+        #SASS
+            Anidamiento
+            Ambito de variables
+            Mixin
+            Extendend
+            Herencia
+            Operaciones
+            Funciones</code></pre>
+<p style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 38px; top: 500px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/index.php y nos creara el archivo css apartir de nuestro scss</font>
+</p>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-c/index.php</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <h2 style="position: absolute; width: 869px; height: 51.8288px; z-index: 8; left: 43px; top: 105px; max-height: none; max-width: none; font-size: 30px;" class="absolute-element">
+    <font style="font-size: 52px;" color="#000000">Mejorando la llamada</font>
+</h2>
+<p style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 43px; top: 409px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Ahora visitamos: example.com/index.php y nos creara el archivo css apartir de nuestro scss</font>
+</p>
+<h3 style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 57px; top: 228px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Le añadimos un contador de tiempo y comprobamos la fecha de los archivos antes de crear el css</font>
+</h3>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Ejemplo: scss-c/index2.php</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">
+    <h2 style="position: absolute; width: 869px; height: 101.02px; z-index: 8; left: 43px; top: 105px; max-height: none; max-width: none; font-size: 30px;" class="absolute-element">
+    <font style="font-size: 52px;" color="#000000">Usando Wordpress y pasando valores al css</font>
+</h2>
+<h1 style="position: absolute; width: 869px; height: 81.6992px; z-index: 9; left: 43px; top: 409px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Al lio&nbsp;</font>
+</h1>
+<h3 style="position: absolute; width: 869px; height: 108.303px; z-index: 9; left: 43px; top: 252px; max-height: none; max-width: none;" class="absolute-element">
+    <font color="#000000">Vamos a ver como pasar variables desde un CMS (Wordpress) al scss para que genere una hoja de estilos</font>
+</h3>
+
+<blockquote class="absolute-element" style="max-height: none; max-width: none; position: absolute; width: 387.171px; height: 63px; z-index: 4; left: 520px; top: 564px;">
+    <p style="position: absolute; width: 869px; height: 113.78px; z-index: 10; left: 9px; top: 13px; max-height: none; max-width: none;" class="absolute-element" align="left">
+        <font color="#000000">Archivos: sass-wp</font>
+</p>
+</blockquote>
+
+<br>
+</section>
+<section data-background-color="rgba( 255, 255, 255, 0.9 )">&nbsp;<h1 style="position: absolute; width: 869px; height: 101.02px; z-index: 8; left: 47px; top: 189px; max-height: none; max-width: none; font-size: 30px;" class="absolute-element">
+    <font style="font-size: 92px;" color="#000000">¿Preguntas?</font>
+</h1>
+<h1 style="position: absolute; width: 869px; height: 101.02px; z-index: 8; left: 47px; top: 438px; max-height: none; max-width: none; font-size: 30px;" class="absolute-element">
+    <font style="font-size:62px;" color="#000000">Feliz Navidad!!</font>
+</h1>
+</section>
+</div>
+</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
