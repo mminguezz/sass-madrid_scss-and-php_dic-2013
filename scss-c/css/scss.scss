@@ -1,0 +1,121 @@
+
+a{
+	border: 0px solid pink;
+	&:hover {
+		border-width: 2px;
+	}
+	span{
+		color:pink;
+		text-transform:uppercase;
+		@media screen and (min-width:500px) {
+		    color:blue;
+		}
+	}
+	&.world {
+        color: blue;
+    }
+
+    & .mold {
+        height: 200px;
+    }
+
+    .dog & {
+        color: blue;
+    }
+}/* anidamiento */
+
+.main {
+    font:{
+    	weight: bold;
+        size: 12px;
+    }
+    .intro {
+        font:{
+            size: 20px;
+        }
+    }
+}
+
+
+$color: olive;
+.ina {
+	$color: green;
+	color: $color;
+}
+.outa {
+	color: $color;
+}/* ambito de variables */
+
+
+@mixin generic-box($width: 2px, $color: #000) {
+	border: $width solid $color;
+	color: $color;
+}
+.generic-error {
+	padding: 20px;
+	margin: 4px;
+	@include generic-box(5px, #f00);
+}/* mixin */
+
+
+.block {
+	margin: 10px 5px;
+	color:white;
+}
+p.blex {
+	@extend .block;
+	border: 0px solid #EEE;
+	border-bottom:1px;
+}/* extendend Herencia */
+
+
+
+$name: foo;
+$attr: border;
+p.#{$name} {
+  #{$attr}-color: blue;
+}/* interpolacion */
+
+.opera {
+  font-size: 10px + 10;
+  color:#444 + #600;
+  background-color: hsl(0, 100%, 50%);
+	@if lightness($color) > 30% {
+		border-color: pink;
+	}
+	@else {
+		border-color: orange;
+	}
+}
+/* operaciones */
+
+
+	@each $animal in puma, sea-slug, egret, salamander {
+		.#{$animal}-icon {
+			 background-image: url('/images/#{$animal}.png');
+		}
+	}
+
+	$i: 6;
+	@while $i > 0 {
+		.item-#{$i} { width: 2em * $i; }
+		$i: $i - 2;
+	}
+
+	@for $i from 1px to 10px {
+		.border-#{$i} {
+			 border: $i solid blue;
+		}
+	}
+
+
+$color2:#506222;
+
+.all-functions{
+	/* http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html */
+	border:2px solid green;
+	color: darken($color2, 10%);
+	border-bottom-color: grayscale($color2);
+	background-color:invert($color2);
+	border-top-color:lighten($color2, 10);
+}/* funciones */

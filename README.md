@@ -13,3 +13,12 @@ http://www.meetup.com/Madrid-Sass-Compass-Meetup/events/145897972/
 En el directorio slides estala presentación, abre 'index.html' con el navegador para ver las diapositivas
 
 ## Ejemplos
+
+### scss-a
+Añadiendolo a nuestros PHP y probando que funciona.
+
+### scss-b
+Creando un archivo css desde scss con php.
+
+### scss-c
+Poniendo a prueba el compilado.
