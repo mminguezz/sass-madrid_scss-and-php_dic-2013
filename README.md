@@ -25,6 +25,8 @@ Poniendo a prueba el compilado.
 
 ### sass-wp
 _He modificado un poco el ejemplo de la charla, si no funciona pido disculpas por que no lo he probado._
+
+
 Copia el contenido de esta carpeta en el directorio css de tu theme y añade al archivo function.php
 '''require get_template_directory() . '/css/style.php';
 function sass() {
@@ -34,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'sass' );'''
 
 #### style.php
 ##### Valores a pasara a scss
-En este bloque comentado recogemos el color de del texto del header con ''' get_header_textcolor(); ''' y contamos los elementos li de primer nivel del menu con el ID=1 para pasarlo como variable al scss.
+En este bloque comentado recogemos el color de del texto del header con 'get_header_textcolor();' y contamos los elementos li de primer nivel del menu con el ID=1 para pasarlo como variable al scss.
 
 En el style.scss tendriamos que cambiar '''.main-navigation''' por la clase del menu y a probar el resultado !Jugando con hsl y adjust_hue!. No os asusteis con el festival de colores. :)
 
