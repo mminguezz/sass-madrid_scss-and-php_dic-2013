@@ -36,9 +36,9 @@ add_action( 'wp_enqueue_scripts', 'sass' );'''
 
 #### style.php
 ##### Valores a pasara a scss
-En este bloque comentado recogemos el color de del texto del header con 'get_header_textcolor();' y contamos los elementos li de primer nivel del menu con el ID=1 para pasarlo como variable al scss.
+En este bloque comentado recogemos el color de del texto del header con 'get_header_textcolor();' y contamos los elementos li de primer nivel del menu con el ID=1 para pasarlo como variable al scss. Yo he dejado definidos las variables en el scss por si quereis probar el resultado del menu sin añadirlo a un theme de WordPress.
 
-En el style.scss tendriamos que cambiar '''.main-navigation''' por la clase del menu y a probar el resultado !Jugando con hsl y adjust_hue!. No os asusteis con el festival de colores. :)
+En el style.scss tendriamos que cambiar '.main-navigation' por la clase del menu y a probar el resultado !Jugando con hsl y adjust_hue!. No os asusteis con el festival de colores. :)
 
 Cualquier comentario o consejo sera bien recibido.
 @m_minguezz
