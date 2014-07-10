@@ -1,0 +1,34 @@
+
+/* cambiamos el color del titulo de los post para comprobar que funciona */
+#main .entry-title a {
+    color: rgb(43, 43, 250); /* Aqui usariamos $my_text_color que seria el color del texto header  */
+}
+
+
+// Recibiriamos desde el style.php $lip, que es el numero de items del menu de WordPress
+$lip:8;
+/**
+aqui el ejemplo de html
+
+**/
+
+
+//nav
+.main-navigation{   //esta seria la clase de header nav ul
+	$tres60: 360deg/$lip;
+	@for $i from 1 through $lip {
+		$degreesp: $i*$tres60;
+		li:nth-child(#{$i}):hover{ background-color:hsl($degreesp, 90, 20); }
+		li:nth-child(#{$i}) a{ color:adjust_hue(red, $degreesp); }
+	}
+	li{
+		padding: $u*2 $u*4;
+		a{
+			text-shadow: 1px 1px 2px $black;
+			font-size: 1.2em;
+		}
+		box-shadow: 2px 2px 6px $black inset;
+	}
+	background-color: $black;
+	border: 3px solid $black;
+}
