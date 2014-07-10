@@ -3,10 +3,10 @@ sass-madrid_scss-and-php_dic-2013
 
 Madrid Sass &amp; Compass Meetup - Dic 2013 - Compilando Sass con PHP
 
-## Grupo de Meetup
+## Grupo de Meetup: Madrid Sass Compass
 http://www.meetup.com/Madrid-Sass-Compass-Meetup/
 
-## Pagina del Meetup Compilando Sass con PHP
+## Pagina del Meetup: Compilando Sass con PHP
 http://www.meetup.com/Madrid-Sass-Compass-Meetup/events/145897972/
 
 ## Slides
